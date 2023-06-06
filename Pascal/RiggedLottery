@@ -1,0 +1,25 @@
+{This program was written by C Wu on 5/5/2021}
+program raffle (input,output);
+var
+ID : array [1..10] of string;
+i : integer;
+num_of_IDs : integer;
+
+begin
+    {Loop to enter the ID}
+    writeln ('Enter the amount of IDs to be scanned');
+    readln (num_of_IDs);
+    For i := 1 to num_of_IDs do
+    Begin
+        writeln ('Enter your ID');
+        readln (ID[i]);
+        Begin
+        if (ID[i] = '15000666') or (ID[i] = '15000999')then
+            writeln ('Congratulations, You have won the raffle!');
+        End;
+    End;
+    writeln ('The third ID is ',ID[3]);
+    writeln ('The fifth ID is ',ID[5]);
+    writeln ('The ninth ID is ',ID[9]);
+    readln;
+end.
